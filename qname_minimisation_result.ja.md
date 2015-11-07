@@ -4,8 +4,8 @@
 
 ### クライアント
 
-* OS: CentOS 6.7 on VirtualBox
-* DNSクライアント: DiG 9.10.2-P3
+* OS: Ubuntu Mate 15.04
+* DNSクライアント: DiG 9.10.3
 
 ### サーバ
 
@@ -14,7 +14,7 @@
 
    - Bind: 9.10.2-P3
    - NSD: 4.1.3
-   - PowerDNS Authoritative Server 3.4.4
+   - PowerDNS Authoritative Server 3.4.7
    - knotDNS 1.6.4
 
 ## 調査内容
