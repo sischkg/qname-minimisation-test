@@ -77,7 +77,7 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
 
 7. CHILDのNS RRsetはキャッシュにない(5)
 
-8. ns1.example.com.に`CHILD = zzz.example.com`のNをクエリ (6)
+8. ns1.example.com.に`CHILD = zzz.example.com`のNSをクエリ (6)
 
     $ dig @<DNSサーバのIPアドレス> zzz.example.com.  NS +norec
 
@@ -135,7 +135,7 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
 
 7. CHILDのNS RRsetはキャッシュにない(5)
 
-8. ns1.example.com.に`CHILD = zzz.example.com`のNをクエリ (6)
+8. ns1.example.com.に`CHILD = zzz.example.com`のNSをクエリ (6)
 
     $ dig @<DNSサーバのIPアドレス> zzz.example.com.  NS +norec
 
