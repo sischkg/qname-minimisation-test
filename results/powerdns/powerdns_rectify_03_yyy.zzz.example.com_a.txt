@@ -1,0 +1,21 @@
+
+; <<>> DiG 9.10.3 <<>> @192.168.33.13 yyy.zzz.example.com a +norec
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48261
+;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1680
+;; QUESTION SECTION:
+;yyy.zzz.example.com.		IN	A
+
+;; ANSWER SECTION:
+yyy.zzz.example.com.	300	IN	A	192.168.33.13
+
+;; Query time: 0 msec
+;; SERVER: 192.168.33.13#53(192.168.33.13)
+;; WHEN: Sat Nov 07 19:44:23 JST 2015
+;; MSG SIZE  rcvd: 64
+
