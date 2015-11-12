@@ -1,6 +1,6 @@
 # QNAME-MINIMISATIONに対する権威サーバの応答の比較
 
-* PowerDNSのPeter van Dijk(@Habbie)さんから、PowerDNSではレコードを登録後に`recitfy-zone`コマンドを実行するようにとアドバイスを頂きましたので、rectify-zone実行後の結果を追記しました。
+* PowerDNSのPeter van Dijk(@Habbie)さんから、PowerDNSではレコードを登録後に`pdnssec  recitfy-zone`コマンドを実行するようにとアドバイスを頂きましたので、rectify-zone実行後の結果を追記しました。
 
 ## 環境
 
@@ -146,11 +146,11 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
 9. 応答はNXDOMAINであるため、応答キャッシュに保存し、終了 (6c)
 
 
-### PowerDNS ( rectify-zone実行済み )
+### PowerDNS ( pdnssec rectify-zone実行済み )
 
-Backend(MySQL)にレコードを追加したあとに、`rectify-zone`コマンドを実行します。
+Backend(MySQL)にレコードを追加したあとに、`pdnssec rectify-zone`コマンドを実行します。
 
-    $  pdnssec rectify-zone example.com
+    $ pdnssec rectify-zone example.com
     Non DNSSEC zone, only adding empty non-terminals
 
 このコマンド実行後に、PowerDNSはNOERRORを返すようになります。
@@ -204,9 +204,9 @@ Backend(MySQL)にレコードを追加したあとに、`rectify-zone`コマン�
 
    * [PowerDNSに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/powerdns/powerdns_rectify_03_yyy.zzz.example.com_a.txt)
 
-#### rectify-zone
+#### pdnssec rectify-zone
 
-PowerDNS(MySQL backend)にて`rectify-zone`を実行すると、recordsテーブルへ`zzz.example.com`に対応する行が追加されます。
+PowerDNS(MySQL backend)にて`pdnssec  rectify-zone`を実行すると、recordsテーブルへ`zzz.example.com`に対応する行が追加されます。
 
 実行前
 
