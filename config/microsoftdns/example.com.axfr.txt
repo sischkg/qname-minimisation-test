@@ -1,0 +1,13 @@
+; <<>> DiG 9.10.3 <<>> @10.201.8.41 example.com axfr
+; (1 server found)
+;; global options: +cmd
+example.com.            300     IN      SOA     ns1.example.com. hostmaster.example.com. 21 900 600 86400 3600
+example.com.            300     IN      NS      ns1.example.com.
+ns1.example.com.        300     IN      A       10.201.8.41
+www.example.com.        300     IN      A       10.201.8.41
+yyy.zzz.example.com.    300     IN      A       10.201.8.41
+example.com.            300     IN      SOA     ns1.example.com. hostmaster.example.com. 21 900 600 86400 3600
+;; Query time: 0 msec
+;; SERVER: 10.201.8.41#53(10.201.8.41)
+;; WHEN: Thu Nov 12 15:59:50 JST 2015
+;; XFR size: 6 records (messages 1, bytes 224)
