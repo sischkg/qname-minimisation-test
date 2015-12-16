@@ -1,0 +1,22 @@
+$ dig @10.201.8.38 zzz.example.com ns +norec
+
+; <<>> DiG 9.10.3 <<>> @10.201.8.38 zzz.example.com ns +norec
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38704
+;; flags: qr aa ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4000
+;; QUESTION SECTION:
+;zzz.example.com.		IN	NS
+
+;; AUTHORITY SECTION:
+example.com.		300	IN	SOA	ns1.example.com. hostmaster.example.com. 12 900 600 86400 3600
+
+;; Query time: 0 msec
+;; SERVER: 10.201.8.38#53(10.201.8.38)
+;; WHEN: Wed Dec 16 18:37:37 JST 2015
+;; MSG SIZE  rcvd: 95
+
