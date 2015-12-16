@@ -19,6 +19,9 @@
    - PowerDNS Authoritative Server 3.4.7(MySQL Backend)
    - knotDNS 1.6.4
 
+* OS: Microsoft Windows 2008R2
+* OS: Microsoft Windows 2012R2
+
 ## 調査内容
 
 各DNSサーバ上にゾーンexample.comを設定します。その設定ファイルは、以下のとおりです。
@@ -58,7 +61,7 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
 ()付きの数字は、[draft-ietf-dnsop-qname-minimisation-07](https://tools.ietf.org/html/draft-ietf-dnsop-qname-minimisation-07)
 のAppendix Aのものです。
 
-### Bind / NSD / knotDNS
+### Bind / NSD / knotDNS / Windoes 2012R2
 
 1. クエリを受信
 
@@ -86,6 +89,7 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
    * [Bindに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/bind/bind_01_zzz.example.com_ns.txt)
    * [NSDに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/nsd/nsd_01_zzz.example.com_ns.txt)
    * [knotDNSに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/knot/knot_01_zzz.example.com_ns.txt)
+   * [Windows 2012R2に対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/win2012r2/win2012r2_01_zzz.example.com_ns.txt)
 
 9. 応答はNOERROR/NODATA answerであるため、応答キャッシュに保存し、(3)へ (6d)
 
@@ -104,6 +108,7 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
    * [Bindに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/bind/bind_02_yyy.zzz.example.com_ns.txt)
    * [NSDに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/nsd/nsd_02_yyy.zzz.example.com_ns.txt)
    * [knotDNSに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/knot/knot_02_yyy.zzz.example.com_ns.txt)
+   * [Windows 2012R2に対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/win2012r2/win2012r2_02_yyy.zzz.example.com_ns.txt)
 
 14. 応答はNOERROR/NODATA answerであるため、応答キャッシュに保存し、(3)へ (6d)
 
@@ -114,9 +119,10 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
    * [Bindに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/bind/bind_03_yyy.zzz.example.com_a.txt)
    * [NSDに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/nsd/nsd_03_yyy.zzz.example.com_a.txt)
    * [knotDNSに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/knot/knot_03_yyy.zzz.example.com_a.txt)
+   * [Windows 2012R2に対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/win2012r2/win2012r2_03_yyy.zzz.example.com_a.txt)
 
 
-### PowerDNS
+### PowerDNS / Windows 2008R2
 
 1. クエリを受信
 
@@ -142,6 +148,7 @@ resolverはキャッシュサーバではなく、digコマンドで代用しま
     $ dig @<DNSサーバのIPアドレス> zzz.example.com.  NS +norec
 
    * [PowerDNSに対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/powerdns/powerdns_01_zzz.example.com_ns.txt)
+   * [Windows 2008R2に対するクエリとレスポンス](https://github.com/sischkg/qname-minimisation-test/blob/master/results/win2008r2/win2008r2_01_zzz.example.com_ns.txt)
 
 9. 応答はNXDOMAINであるため、応答キャッシュに保存し、終了 (6c)
 
